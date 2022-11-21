@@ -22,3 +22,50 @@ footer {
   width: 100%;
   background-color: #3fc979;
 }
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #e7ebe7;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 2.4rem;
+  line-height: 1.6;
+  letter-spacing: 0.04rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3fc979;
+  color: #fff;
+
+}
+
+.logo span {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.7;
+  color:#fff;
+  margin-inline: 2rem;
+}
+
+.navmenu {
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+}
+
+.navmenu li {
+  list-style: none;
+  margin: 2rem;
+}
+
+.navmenu li a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #fff;
+}
