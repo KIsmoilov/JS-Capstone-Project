@@ -11,18 +11,6 @@ body {
   background-color: #e7ebe7;
 }
 
-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: fixed;
-  bottom: 0;
-  text-align: center;
-  height: 3rem;
-  width: 100%;
-  background-color: #3fc979;
-}
-
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
@@ -68,4 +56,17 @@ header {
   text-decoration: none;
   font-size: 1.6rem;
   color: #fff;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  height: 6rem;
+  font-size: 2rem;
+  width: 100%;
+  background-color: #3fc979;
 }
