@@ -1,3 +1,6 @@
+import { likeGetData } from "./getLikeData.js";
+import { getData } from "./getdata.js";
+
 const displayMealLists =(meal) => {
  const container = document.getElementById('meal-item-container');
  const article = document.createElement('article');
@@ -11,8 +14,12 @@ const displayMealLists =(meal) => {
                   <h3>${meal.strCategory}</h3>
                    </div>
                     <div class="like-counter">
-                    <i class="uil uil-heart heart-icon"></i>
-                    <span id="likes"></span>
+                    <i class="uil uil-heart heart-icon" id="${
+                      meal.idCategory
+                    }"></i>
+                    <span class="likes" id="${meal.idCategory}">${displayLikes(
+   meal.idCategory
+ )}</span>
                     <p>Likes</p>
                 </div>
                 </div>
@@ -22,4 +29,16 @@ const displayMealLists =(meal) => {
  container.appendChild(article);
 }
 
-export { displayMealLists };
+
+const displayLikes = async(id) => {
+    const likeLists = await likeGetData();
+    likeLists.forEach(async (like)  => {
+       if(like.item_id === id ) {
+        console.log(Number(like.likes));
+        return await like.likes;
+       }
+       
+    });
+}
+
+export { displayMealLists , displayLikes };
