@@ -27,7 +27,7 @@ const displaySelectedMeal = (selectedMeal, comments) => {
   <img class="popUpImg" src="${selectedMeal.strCategoryThumb}" alt="meal image">
   <h2 class="popUpTitle">${selectedMeal.strCategory}</h2>
   <p class="popUpDiscription">${selectedMeal.strCategoryDescription}</p>
-  <h3 class="commentCount">Comments<span class="commentCounter">()</span></h3>
+  <h3 class="commentCount">Comments<span class="commentCounter">(${comments.length ? comments.length : 0})</span></h3>
   <div class="comment">     
   </div>
   <h3 class="addComment">Add a comment</h3>
