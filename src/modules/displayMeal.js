@@ -1,9 +1,14 @@
-const displayMealLists = (meal) => {
+import { likeGetData , likePostData } from "./getLikeData.js";
+
+
+const displayMealLists = (meal, likes) => {
   const container = document.getElementById('meal-item-container');
   const article = document.createElement('article');
+  const itemLike = likes.find((item) => item.item_id === meal.idCategory);
+  article.setAttribute('data-id',meal.idCategory);
   article.innerHTML = `
   <div class="meal-item">
-                <div class="meal-img" data-id= "${meal.idCategory}">
+                <div class="meal-img">
                 <img src="${meal.strCategoryThumb}" alt="meal images">
                 </div>
                 <div class="meal-name">
@@ -11,28 +16,23 @@ const displayMealLists = (meal) => {
                   <h3>${meal.strCategory}</h3>
                    </div>
                     <div class="like-counter">
-                    <i class="uil uil-heart heart-icon" id="${
-  meal.idCategory
-}"></i>
-                    <span class="likes" id="${meal.idCategory}" > </span>
+                    <i class="uil uil-heart heart-icon"></i>
+
+                    <p class="like-container">${itemLike.likes}</p>
                     <p>Likes</p>
                 </div>
                 </div>
                 <button type="button" id="comment-btn">Comment</button>
-            </div>`.trim();
+            </div>`;
+
+    
+      
 
   container.appendChild(article);
+
+
 };
 
-// const displayLikes = async(id) => {
-//     const likeLists = await likeGetData();
-//     likeLists.forEach(async (like)  => {
-//        if(like.item_id === id ) {
-//         console.log(Number(like.likes));
-//         return await like.likes;
-//        }
 
-//     });
-// }
 
-export default displayMealLists;
+export {  displayMealLists };
