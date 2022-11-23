@@ -1,6 +1,5 @@
 import getData from './getdata.js';
-import getCommentData from './postComment.js';
-// import { addCommentInput } from './postComment.js';
+import { getCommentData, addCommentInput } from './postComment.js';
 
 const popUpContainer = document.querySelector('.popUp-bg');
 const popUp = document.createElement('div');
@@ -31,10 +30,10 @@ const displaySelectedMeal = (selectedMeal, comments) => {
   <div class="comment">     
   </div>
   <h3 class="addComment">Add a comment</h3>
-      <form class="inputComment" action="#" method="post">
+      <form class="inputComment" id="inputComment" action="#" method="post">
           <input type="text" name="username" placeholder="Your name" required>
           <textarea type="text" name="comment" placeholder="Your insights" required></textarea>
-          <button class="commentBtn" type="submit">Comment</button>
+          <button class="commentBtn">Comment</button>
       </form>`;
 
   popUpContainer.appendChild(popUp);
@@ -44,12 +43,25 @@ const displaySelectedMeal = (selectedMeal, comments) => {
 const getSelectedMeal = async (selectedIdCat) => {
   const selectedMeals = await getData();
   if (selectedIdCat !== undefined) {
-    // TODO Call function that returns comments with ID
-    // Function returns object
     const commentObj = await getCommentData(selectedIdCat);
     const selectedMeal = selectedMeals.categories.find((meal) => meal.idCategory === selectedIdCat);
     displaySelectedMeal(selectedMeal, commentObj);
   }
+
+  document.getElementById('inputComment').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const userNameInput = document.getElementById('inputComment').elements.username;
+    const commentInput = document.getElementById('inputComment').elements.comment;
+
+    const newComment = {
+      item_id: 2,
+      username: userNameInput.value.trim(),
+      comment: commentInput.value.trim(),
+    };
+
+    addCommentInput(newComment);
+    document.getElementById('inputComment').reset();
+  });
 
   if (document.querySelector('.closeBtn') !== null) {
     document.querySelector('.closeBtn').addEventListener('click', (e) => {

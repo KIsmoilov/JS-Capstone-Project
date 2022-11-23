@@ -13,16 +13,15 @@ const getCommentData = async (id) => {
 };
 
 const addCommentInput = async (newComment) => {
-  const response = await fetch(`${url}`, {
+  const response = await fetch(url, {
     method: 'POST',
     body: JSON.stringify(newComment),
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
     },
   });
-
+  getCommentData();
   return response.json();
 };
 
-export default getCommentData;
-export { addCommentInput };
+export { getCommentData, addCommentInput };
