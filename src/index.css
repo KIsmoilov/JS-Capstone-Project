@@ -7,10 +7,6 @@
   font-family: 'Poppins', sans-serif;
 }
 
-body {
-  background-color: #e7ebe7;
-}
-
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
@@ -30,21 +26,20 @@ header {
   align-items: center;
   background-color: #3fc979;
   color: #fff;
-
 }
 
 .logo span {
   font-size: 3rem;
   font-weight: 700;
   line-height: 1.7;
-  color:#fff;
+  color: #fff;
   margin-inline: 2rem;
 }
 
 .navmenu {
- display: flex;
- justify-content: space-around;
- align-items: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .navmenu li {
@@ -95,7 +90,7 @@ section {
 #meal-item-container {
   margin-top: 2rem;
   display: grid;
-  grid-template-columns: repeat( 3 , 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .meal-item {
@@ -117,7 +112,7 @@ section {
   margin: 3rem;
 }
 
-.like-counter{
+.like-counter {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -129,19 +124,17 @@ section {
   color: #fff;
   padding: 1.5rem 2rem;
   font-size: 1.5rem;
-  letter-spacing: 1.7;
   border-radius: 1rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   display: inline-block;
   cursor: pointer;
-  transition: .4s ease-in;
+  transition: 0.4s ease-in;
   outline: 0;
   border: 0;
 }
 
 #comment-btn:hover {
- background-color: transparent;
- color: #000;
- border: 1px solid #3fc979;
+  background-color: transparent;
+  color: #000;
+  border: 1px solid #3fc979;
 }
-
