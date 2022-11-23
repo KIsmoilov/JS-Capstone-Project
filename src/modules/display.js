@@ -10,8 +10,8 @@ const getMealLists = async () => {
    document.querySelectorAll('.heart-icon').forEach((heart) => {
      heart.addEventListener('click', () => {
        likePostData(heart.id);
-       console.log(heart.id);
-       displayLikes(heart.id);
+      //  console.log(heart.id);
+      //  displayLikes(heart.id);
      });
    });
  });

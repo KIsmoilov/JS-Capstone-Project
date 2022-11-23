@@ -7,7 +7,7 @@ const displayMealLists =(meal) => {
  article.innerHTML = `
   <div class="meal-item">
                 <div class="meal-img" data-id= "${meal.idCategory}">
-                    <img src="${meal.strCategoryThumb}" alt="meal images">
+                <img src="${meal.strCategoryThumb}" alt="meal images">
                 </div>
                 <div class="meal-name">
                   <div class="meal-title">
@@ -17,9 +17,7 @@ const displayMealLists =(meal) => {
                     <i class="uil uil-heart heart-icon" id="${
                       meal.idCategory
                     }"></i>
-                    <span class="likes" id="${meal.idCategory}">${displayLikes(
-   meal.idCategory
- )}</span>
+                    <span class="likes" id="${meal.idCategory}" > </span>
                     <p>Likes</p>
                 </div>
                 </div>
@@ -30,15 +28,15 @@ const displayMealLists =(meal) => {
 }
 
 
-const displayLikes = async(id) => {
-    const likeLists = await likeGetData();
-    likeLists.forEach(async (like)  => {
-       if(like.item_id === id ) {
-        console.log(Number(like.likes));
-        return await like.likes;
-       }
+// const displayLikes = async(id) => {
+//     const likeLists = await likeGetData();
+//     likeLists.forEach(async (like)  => {
+//        if(like.item_id === id ) {
+//         console.log(Number(like.likes));
+//         return await like.likes;
+//        }
        
-    });
-}
+//     });
+// }
 
 export { displayMealLists , displayLikes };
