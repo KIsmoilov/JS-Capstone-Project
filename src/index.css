@@ -107,6 +107,13 @@ header {
 
 .comment {
   display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.comment-item {
+  display: flex;
   flex-direction: row;
   font-size: 1.4rem;
   gap: 1rem;
@@ -116,7 +123,7 @@ header {
   background-color: rgb(0, 0, 0, 0.1);
   width: 80%;
   line-height: 1.6rem;
-  margin-bottom: 1rem;
+  margin: 0 auto 1rem auto;
 }
 
 .addComment {
