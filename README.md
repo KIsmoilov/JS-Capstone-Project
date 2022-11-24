@@ -21,7 +21,7 @@ This app allows the user to see various kinds of meal categories with the functi
 - Stylelint (A mighty, modern linter that helps you avoid errors and enforce conventions in your styles).
 
 ## Live Demo (if available)
-Please use the following [link]() to access the website: 
+Please use the following [link](https://kismoilov.github.io/JS-Capstone-Project/dist/) to access the website: https://kismoilov.github.io/JS-Capstone-Project/dist/
 ### Linter Tests
 
 - `npx hint .`

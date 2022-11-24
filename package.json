@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/KIsmoilov/JS-Capstone-Project/issues"
   },
-  "homepage": "https://kismoilov.github.io/JS-Capstone-Project/",
+  "homepage": "https://kismoilov.github.io/JS-Capstone-Project/dist/",
   "dependencies": {
     "gh-pages": "^4.0.0",
     "lodash": "^4.17.21",
