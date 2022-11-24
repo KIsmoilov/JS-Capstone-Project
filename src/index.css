@@ -56,7 +56,7 @@ header {
 .item-counter {
   width: 100px;
   height: 100px;
-  padding: .5rem;
+  padding: 0.5rem;
   background-color: #fff;
   color: #3fc979;
   border-radius: 50%;
@@ -154,9 +154,8 @@ section {
   border: 1px solid #3fc979;
 }
 
-@media screen and (max-width : 768px) {
-
+@media screen and (max-width: 768px) {
   #meal-item-container {
-   grid-template-columns: 1fr;
-}
+    grid-template-columns: 1fr;
+  }
 }

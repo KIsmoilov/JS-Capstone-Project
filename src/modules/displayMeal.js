@@ -1,6 +1,3 @@
-import { likeGetData , likePostData } from "./getLikeData.js";
-
-
 const displayMealLists = (meal) => {
   const container = document.getElementById('meal-item-container');
   const article = document.createElement('article');
@@ -26,6 +23,4 @@ const displayMealLists = (meal) => {
   container.appendChild(article);
 };
 
-export { displayMealLists };
-
-
+export default displayMealLists;
