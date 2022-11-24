@@ -1,6 +1,7 @@
 import getData from './getdata.js';
 import displayMealLists from './displayMeal.js';
 import { likeGetData, likePostData } from './getLikeData.js';
+import getSelectedMeal from './popUpDom.js';
 
 const container = document.getElementById('meal-item-container');
 
@@ -40,6 +41,21 @@ const getMealLists = async () => {
   heartIcons.forEach((heart) => {
     handleLikeClick(heart);
   });
+
+  const comment = document.querySelectorAll('.commentButton');
+  let selectedIdCat;
+  if (comment !== null) {
+    comment.forEach((clickedBtn) => {
+      clickedBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (document.querySelector('.popUp-bg').style.display === '') {
+          document.querySelector('.popUp-bg').style.display = 'flex';
+        }
+        selectedIdCat = e.currentTarget.closest('article').getAttribute('data-id');
+        getSelectedMeal(selectedIdCat);
+      });
+    });
+  }
 };
 
 export default getMealLists;

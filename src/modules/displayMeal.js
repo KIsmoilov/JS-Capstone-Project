@@ -18,7 +18,7 @@ const displayMealLists = (meal) => {
         <p>Likes</p>
       </div>
     </div>
-    <button type="button" id="comment-btn">Comment</button>
+    <button type="button" class="commentButton" id="comment-btn">Comment</button>
   </div>`;
   container.appendChild(article);
 };
