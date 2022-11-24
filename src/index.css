@@ -73,7 +73,7 @@ header {
   background-color: #3fc979;
   width: 50rem;
   height: 70rem;
-  border: 1px solid green;
+  border: 2px solid green;
   border-radius: 1rem;
   padding: 2rem;
   overflow-y: scroll;
@@ -95,9 +95,10 @@ header {
 }
 
 .popUpDiscription {
-  padding: 0 1rem;
+  padding: 0 1.5rem;
   font-size: 1.6rem;
   line-height: 2.2rem;
+  text-align: center;
 }
 
 .commentCount {
@@ -178,7 +179,7 @@ header {
   width: 25%;
   height: 3.5rem;
   border: 1px solid green;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
   border-radius: 0.5rem;
   background: rgba(255, 255, 255, 0.8);
   cursor: pointer;
@@ -191,9 +192,18 @@ header {
   height: 3.9rem;
 }
 
+.commentDate {
+  min-width: 8rem;
+}
+
 .message {
   font-size: 1.4rem;
   margin-bottom: 3rem;
+  text-align: center;
+}
+
+.popUpImg {
+  margin: 2rem auto;
 }
 
 footer {
@@ -207,4 +217,58 @@ footer {
   font-size: 2rem;
   width: 100%;
   background-color: #3fc979;
+}
+
+@media screen and (max-width: 768px) {
+  .popUp {
+    width: 45rem;
+  }
+
+  .commentBtn {
+    font-size: 1rem;
+  }
+
+  .commentBtn:hover {
+    font-size: 1.1rem;
+  }
+
+  .popUpTitle {
+    font-size: 3rem;
+  }
+
+  .commentCount {
+    font-size: 2rem;
+  }
+
+  .addComment {
+    font-size: 2rem;
+  }
+
+  .message {
+    font-size: 1.2rem;
+    padding: 0 3rem;
+  }
+
+  .popUpImg {
+    width: 70%;
+  }
+
+  .commentDate {
+    font-size: 1rem;
+    min-width: 6rem;
+  }
+
+  .commenterName {
+    font-size: 1.2rem;
+  }
+
+  .commentContent {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .popUp {
+    width: 90%;
+  }
 }

@@ -10,7 +10,7 @@ comment.addEventListener('click', (e) => {
   if (document.querySelector('.popUp-bg').style.display === '') {
     document.querySelector('.popUp-bg').style.display = 'flex';
   }
-  selectedIdCat = e.currentTarget.parentElement.firstChild.nextElementSibling.dataset.id;
+  selectedIdCat = e.currentTarget.closest('article').getAttribute('data-id');
   getSelectedMeal(selectedIdCat);
 });
 
