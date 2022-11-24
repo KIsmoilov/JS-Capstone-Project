@@ -13,15 +13,15 @@ const getCommentData = async (id) => {
 };
 
 const addCommentInput = async (newComment) => {
-  const response = await fetch(url, {
+  await fetch(url, {
     method: 'POST',
     body: JSON.stringify(newComment),
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
     },
   });
-  getCommentData();
-  return response.json();
+  const allComments = await getCommentData(newComment.item_id);
+  return allComments;
 };
 
 export { getCommentData, addCommentInput };

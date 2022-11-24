@@ -84,6 +84,7 @@ header {
   flex-direction: row;
   justify-content: center;
   align-self: flex-end;
+  position: fixed;
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 5px;
@@ -173,7 +174,7 @@ header {
 }
 
 .commentBtn {
-  margin: 0 auto 5rem auto;
+  margin: 0 auto 1rem auto;
   width: 25%;
   height: 3.5rem;
   border: 1px solid green;
@@ -188,6 +189,11 @@ header {
   border: 2px solid green;
   width: 26%;
   height: 3.9rem;
+}
+
+.message {
+  font-size: 1.4rem;
+  margin-bottom: 3rem;
 }
 
 footer {
