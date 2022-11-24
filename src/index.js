@@ -1,17 +1,19 @@
 import './index.css';
 import getSelectedMeal from './modules/popUpDom.js';
 import { getCommentData } from './modules/postComment.js';
+import getMealLists from './modules/display.js';
+import homeItemCounter from './modules/homeItemsCounter.js';
+import getData from './modules/getdata.js';
 
-const comment = document.getElementById('comment-btn');
-let selectedIdCat;
-
-comment.addEventListener('click', (e) => {
-  e.preventDefault();
-  if (document.querySelector('.popUp-bg').style.display === '') {
-    document.querySelector('.popUp-bg').style.display = 'flex';
-  }
-  selectedIdCat = e.currentTarget.closest('article').getAttribute('data-id');
-  getSelectedMeal(selectedIdCat);
+window.addEventListener('DOMContentLoaded', () => {
+  getMealLists();
+  const homeCounter = document.querySelector('.item-counter');
+  const getList = async () => {
+    const mealLists = await getData();
+    const counterArray = mealLists.categories;
+    homeCounter.textContent = homeItemCounter(counterArray);
+  };
+  getList();
 });
 
 getSelectedMeal();
