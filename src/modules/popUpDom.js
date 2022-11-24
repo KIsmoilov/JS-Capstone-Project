@@ -19,6 +19,8 @@ const createComments = (comments) => {
   }
 };
 
+const commentCounter = (comments) => (comments.length ? comments.length : 0);
+
 const displaySelectedMeal = (selectedMeal, comments) => {
   popUp.className = 'popUp';
   popUp.innerHTML = `
@@ -26,7 +28,7 @@ const displaySelectedMeal = (selectedMeal, comments) => {
   <img class="popUpImg" src="${selectedMeal.strCategoryThumb}" alt="meal image">
   <h2 class="popUpTitle">${selectedMeal.strCategory}</h2>
   <p class="popUpDiscription">${selectedMeal.strCategoryDescription}</p>
-  <h3 class="commentCount">Comments<span id="commentCount" class="commentCounter">(${comments.length ? comments.length : 0})</span></h3>
+  <h3 class="commentCount">Comments<span id="commentCount" class="commentCounter">(${commentCounter(comments)})</span></h3>
   <div class="comment">     
   </div>
   <h3 class="addComment">Add a comment</h3>
@@ -56,7 +58,7 @@ const getSelectedMeal = async (selectedIdCat) => {
   };
 
   const resetComments = async (allComments) => {
-    document.getElementById('commentCount').innerHTML = `(${allComments.length ? allComments.length : 0})`;
+    document.getElementById('commentCount').innerHTML = `(${commentCounter(allComments)})`;
     removeAllChildNodes(document.querySelector('.comment'));
     createComments(allComments);
   };
@@ -108,3 +110,4 @@ const getSelectedMeal = async (selectedIdCat) => {
 };
 
 export default getSelectedMeal;
+export { commentCounter };
