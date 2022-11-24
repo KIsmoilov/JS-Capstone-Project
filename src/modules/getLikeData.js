@@ -8,7 +8,7 @@ const likeGetData = async () => {
 };
 
 const likePostData = async (mealId) => {
-  const response = await fetch(`${url}`, {
+  await fetch(`${url}`, {
     method: 'POST',
     body: JSON.stringify({
       item_id: mealId,
@@ -18,7 +18,6 @@ const likePostData = async (mealId) => {
     },
   });
 
-  return response.json();
 };
 
 export { likeGetData, likePostData };

@@ -23,4 +23,6 @@ const displayMealLists = (meal) => {
   container.appendChild(article);
 };
 
-export default displayMealLists;
+
+
+export default displayMealLists ;

@@ -1,5 +1,5 @@
 import getData from './getdata.js';
-import displayMealLists from './displayMeal.js';
+import displayMealLists   from './displayMeal.js';
 import { likeGetData, likePostData } from './getLikeData.js';
 
 const container = document.getElementById('meal-item-container');
@@ -37,7 +37,9 @@ const getMealLists = async () => {
     setLikes(heart, likes);
   });
 
-  heartIcons.forEach((heart) => handleLikeClick(heart));
+  heartIcons.forEach((heart) => {
+    handleLikeClick(heart);
+  });
 };
 
 export default getMealLists;

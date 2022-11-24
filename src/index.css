@@ -112,6 +112,11 @@ section {
   box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.79);
   margin: 2rem;
   padding: 3rem;
+  transition: .4s ease-in;
+}
+
+.meal-item:hover {
+   transform: translateY(-20px);
 }
 
 .meal-name {
@@ -124,8 +129,21 @@ section {
 
 .heart-icon {
   font-size: 2.5rem;
+  background-color: #3fc979;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  padding: .4rem .7rem;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.79);
+}
+
+.heart-icon:hover {
+  background-color: #fff;
   color: red;
 }
+
 
 .like-counter {
   display: flex;
@@ -154,8 +172,34 @@ section {
   border: 1px solid #3fc979;
 }
 
+#message-container {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  animation: fade-in 3s ease;
+}
+
+.show {
+  padding: 1.5rem 1rem;
+  margin: 0.5rem;
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  color: #fff;
+}
+
+.success {
+  background-color: #3fc979;
+}
+
+
+
 @media screen and (max-width: 768px) {
   #meal-item-container {
     grid-template-columns: 1fr;
   }
+
 }
