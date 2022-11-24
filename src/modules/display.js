@@ -1,5 +1,5 @@
 import getData from './getdata.js';
-import displayMealLists   from './displayMeal.js';
+import displayMealLists from './displayMeal.js';
 import { likeGetData, likePostData } from './getLikeData.js';
 
 const container = document.getElementById('meal-item-container');

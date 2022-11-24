@@ -17,7 +17,6 @@ const likePostData = async (mealId) => {
       'Content-type': 'application/json; charset=UTF-8',
     },
   });
-
 };
 
 export { likeGetData, likePostData };
