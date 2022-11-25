@@ -74,7 +74,7 @@ Food App is a JavaScript capstone group project about building our own web appli
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 Please use the following link to access the website:
-- [Live Demo Link](https://kismoilov.github.io/JS-Capstone-Project/dist/)
+- [Live Demo Link](https://kismoilov.github.io/JS-Capstone-Project/)
 
 <div align="center">
 
@@ -84,6 +84,18 @@ Please use the following link to access the website:
 </div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🚀 Project Details 
+
+- [Kanban Board](https://github.com/KIsmoilov/JS-Capstone-Project/projects/1)
+     
+## 🚀 Pull Request
+
+[Soe Sandar](https://github.com/KIsmoilov/JS-Capstone-Project/pull/22)
+
+[Khusniddin Ismoilov](https://github.com/KIsmoilov/JS-Capstone-Project/pull/23)
+
+
 
 <!-- GETTING STARTED -->
 
