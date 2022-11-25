@@ -89,11 +89,11 @@ Please use the following link to access the website:
 
 - [Kanban Board](https://github.com/KIsmoilov/JS-Capstone-Project/projects/1)
      
-## 🚀 Pull Request
+## 🚀 Pull Requests
 
-[Soe Sandar](https://github.com/KIsmoilov/JS-Capstone-Project/pull/22)
+- [Soe Sandar Win](https://github.com/KIsmoilov/JS-Capstone-Project/pull/22)
 
-[Khusniddin Ismoilov](https://github.com/KIsmoilov/JS-Capstone-Project/pull/23)
+- [Khusniddin Ismoilov](https://github.com/KIsmoilov/JS-Capstone-Project/pull/23)
 
 
 
