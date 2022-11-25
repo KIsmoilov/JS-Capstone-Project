@@ -4,23 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <title>To Do List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,200&display=swap" rel="stylesheet">
+
+<!--icon-->
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+<title>Food App</title>
 <script defer src="index.js"></script></head>
 <body>
-    <div id="toDoForm">
-        <div class="title">
-            <h1>Today's To Do</h1>
-            <i class="fa fa-arrows-rotate icon"></i>
-        </div>
-            <form action="" method="post" id="inputForm">
-                <div class="inputTask">
-                    <input id="addTask" name="todo" type="text" placeholder="Add to your list..." required>
-                    <i class="fa fa-arrow-turn-down icon"></i>
-                </div>
-            </form>
-        <div class="toDoTasksContainer"></div>
-        <button class="btn_clear_all" id="btnClear" type="button">Clear all completed</button>
+    <!--navbar-->
+    <header class="header">
+
+    <div class="logo">
+        <span>Food logo</span>
     </div>
+      
+     <nav class="navbar">
+      <ul class="navmenu">
+        <li>
+            <a href="#index.html">Meal</a>
+            <span class="item-counter"></span>
+        </li>
+        <li>
+            <a href="#about.html">About</a>
+        </li>
+        <li>
+            <a href="#contact.html">Contact</a>
+        </li>
+      </ul>
+     </nav>
+    </header>
+    <!--meal wrapper section-->
+    <section class="meal-container">
+            <h2 class="section-title">Choose your delicious meal</h2>
+            <div id="meal-item-container"> 
+            </div>
+    </section>
+    <div class="popUp-bg"></div>
+    <!--footer-->
+     <footer>Created by Microverse under CC license. All rights reserved.</footer>
     <script src="../dist/main.js"></script>
 </body>
 </html>
+
